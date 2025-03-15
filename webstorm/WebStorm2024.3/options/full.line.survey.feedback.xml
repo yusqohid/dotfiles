@@ -1,0 +1,10 @@
+<application>
+  <component name="FeedbackSurveyState">
+    <languageToSessions>
+      <entry language="TypeScript" sessions-count="2" />
+      <entry language="HTML" sessions-count="7" />
+      <entry language="ECMAScript 6" sessions-count="49" />
+    </languageToSessions>
+    <option name="acceptedCompletionsCnt" value="23" />
+  </component>
+</application>
