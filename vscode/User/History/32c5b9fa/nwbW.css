@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+  --primary: #4D68D6;
+  --secondary: #DAE1FF;
+  --tertiary: #161A34;
+  --black: #312D2D;
+  --grey: #5C5C5C;
+  --white: #fff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  outline: 0;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+}
+
+h2{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem 1rem;
+}
+
+header .logo a{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+header .logo a span{
+  color: var(--primary);
+  font-weight: 800;
+}
+
+header nav ul{
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li{
+  margin-left: 2.5rem;
+}
+
+header nav ul li a{
+  color: var(--black);
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover{
+  color: var(--primary);
+  font-weight: 600;
+}
+
+header a button{
+  padding: 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header a button:hover{
+  background-color: #1a349a;
+}
+
+section .hero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10rem;
+  width: 100%;
+  height: 100vh;
+}
+
+section .hero-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .hero-content h1{
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--tertiary);
+  text-align: center;
+  margin: 1.5rem auto;
+}
+
+section .hero-content h1 span{
+  color: var(--primary);
+}
+
+section .hero-content p{
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+section .hero-content .main-cta button{
+  padding: 1rem;
+  margin: 1rem;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+section .hero-content .second-cta button{
+  padding: 1rem;
+  margin: 1rem;
+  background-color: transparent;
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+section .hero-content .main-cta button:hover{
+  background-color: #1a349a;
+  padding: 1.1rem;
+}
+
+section .hero-content .second-cta button:hover{
+  color: var(--primary);
+}
+
+section .hero-image{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position:relative;
+  width: 80%;
+  height: 450px;
+  margin: auto;
+}
+
+section .hero-image img{
+  margin: auto;
+  height: 400px;
+  position: absolute
+}
+
+section .hero-image img:nth-child(1){
+  z-index: -99;
+  height: 400px;
+}
+
+section .company-logo{
+  width: 70%;
+  margin: 1rem auto;
+  border-radius: 8px;
+  height: 8rem;
+  background-color: transparent;
+}
+
+section .about{
+  width: 100%;
+  height: auto;
+}
+
+/* About - Section2  */
+
+section .about-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section .features-container{
+  width: 80%;
+  margin:1rem auto;
+  padding: 3rem;
+  background-color: var(--secondary);
+  border-radius: 8px;
+}
+
+section .features-container .features{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  section .features-container .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+section .features-container .features-item{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+section .features-container .features-item img{
+  width: 75px;
+  height: 75px;
+  margin-right: 2rem;
+}
+
+section .features-container .features-item .text h2{
+  margin-bottom: 0.6rem;
+  color: var(--primary);
+}
+
+section .features-container .features-item .text p{
+  color: var(--grey);
+  font-weight: 500;
+}

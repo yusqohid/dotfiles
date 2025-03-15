@@ -1,0 +1,18 @@
+.image-container {
+    scroll-behavior: smooth; /* Untuk animasi scroll yang halus */
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+
+.image-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e7ff; /* Warna hover untuk tombol */
+}

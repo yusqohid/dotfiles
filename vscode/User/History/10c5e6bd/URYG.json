@@ -1,0 +1,28 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+    "launch": {
+        "configurations": [],
+        "compounds": []
+    },
+    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontLigatures": true,
+    "cmake.showOptionsMovedNotification": false,
+    "background.windowBackgrounds": [
+        "c:/Users/yusqo/Downloads/1347180.png",
+        "",
+        "c:/Users/yusqo/Downloads/2.drift_revive02.jpg"
+    ],
+    "background.autoInstall": false,
+    "animations.Install-Method": "Apc Customize UI++",
+    "apc.imports": [
+        "file:///c:/Users/yusqo/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
+    ],
+    "glassit.alpha": 240,
+    "explorer.confirmPasteNative": false,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorTheme": "GitHub Dark",
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontWeight": "600",
+}

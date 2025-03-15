@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmPasteNative": false,
+    "liveServer.settings.donotVerifyTags": true
+}

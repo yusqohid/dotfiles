@@ -1,0 +1,28 @@
+/* Container untuk carousel */
+.image-container {
+    scroll-behavior: smooth; /* Animasi scroll halus */
+    -ms-overflow-style: none;  /* Sembunyikan scrollbar di IE dan Edge */
+    scrollbar-width: none;  /* Sembunyikan scrollbar di Firefox */
+}
+
+.image-container::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar di Chrome, Safari, dan Opera */
+}
+
+/* Styling untuk tombol */
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10; /* Pastikan tombol di atas gambar */
+    width: 50px; /* Lebar tombol */
+    height: 50px; /* Tinggi tombol */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e7ff; /* Border untuk kontras */
+}
+
+button:hover {
+    background-color: #e0e7ff; /* Warna hover untuk tombol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow lebih besar saat hover */
+}

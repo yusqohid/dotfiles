@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmPasteNative": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.fontLigatures": true,
+    "editor.fontWeight": "normal"
+}

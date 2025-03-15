@@ -1,0 +1,6 @@
+{
+    "workbench.colorTheme": "Ayu Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmPasteNative": false,
+    "liveServer.settings.donotVerifyTags": true
+}

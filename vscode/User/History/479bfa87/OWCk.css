@@ -1,0 +1,20 @@
+/* Container untuk carousel */
+.image-container {
+    scroll-behavior: smooth; /* Animasi scroll halus */
+    -ms-overflow-style: none;  /* Sembunyikan scrollbar di IE dan Edge */
+    scrollbar-width: none;  /* Sembunyikan scrollbar di Firefox */
+}
+
+.image-container::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar di Chrome, Safari, dan Opera */
+}
+
+/* Styling untuk tombol */
+button {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e0e7ff; /* Warna hover untuk tombol */
+}

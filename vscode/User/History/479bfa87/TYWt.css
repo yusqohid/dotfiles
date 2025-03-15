@@ -1,0 +1,7 @@
+.image-container::-webkit-scrollbar {
+    display: none;
+}
+.image-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
