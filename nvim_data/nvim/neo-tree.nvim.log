@@ -1,0 +1,4 @@
+[ERROR Sun 09 Mar 2025 08:48:12 AM WIB] ...ree.nvim/lua/neo-tree/sources/filesystem/lib/fs_scan.lua:330: /home/yusqohid/Documents/SMT-2/STRUKTUR-DATA/Pertemuan 4 :  ENOENT: no such file or directory: /home/yusqohid/Documents/SMT-2/STRUKTUR-DATA/Pertemuan 4
+[ERROR Sun 09 Mar 2025 08:48:33 AM WIB] ...ree.nvim/lua/neo-tree/sources/filesystem/lib/fs_scan.lua:330: /home/yusqohid/Documents/SMT-2/STRUKTUR-DATA/Pertemuan 4 :  ENOENT: no such file or directory: /home/yusqohid/Documents/SMT-2/STRUKTUR-DATA/Pertemuan 4
+[INFO  Mon 10 Mar 2025 05:10:42 AM WIB] ...ree.nvim/lua/neo-tree/sources/filesystem/lib/fs_scan.lua:110: No items, skipping git ignored/status lookups
+[INFO  Mon 10 Mar 2025 09:15:09 PM WIB] ...ree.nvim/lua/neo-tree/sources/filesystem/lib/fs_scan.lua:110: No items, skipping git ignored/status lookups

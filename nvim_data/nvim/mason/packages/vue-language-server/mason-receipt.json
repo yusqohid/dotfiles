@@ -1,0 +1,1 @@
+{"primary_source":{"type":"registry+v1","id":"pkg:npm\/%40vue\/language-server@2.2.8"},"name":"vue-language-server","links":{"bin":{"vue-language-server":"node_modules\/.bin\/vue-language-server"},"opt":{},"share":{}},"metrics":{"start_time":1741362738070,"completion_time":1741362759793},"secondary_sources":[],"schema_version":"1.1"}

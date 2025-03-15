@@ -1,0 +1,1 @@
+{"metrics":{"completion_time":1741362535777,"start_time":1741362521526},"secondary_sources":[],"primary_source":{"id":"pkg:golang\/mvdan.cc\/gofumpt@v0.7.0","type":"registry+v1"},"links":{"opt":{},"share":{},"bin":{"gofumpt":"gofumpt"}},"schema_version":"1.1","name":"gofumpt"}

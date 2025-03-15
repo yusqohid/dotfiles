@@ -1,0 +1,1 @@
+{"metrics":{"completion_time":1741362546905,"start_time":1741362535123},"secondary_sources":[],"primary_source":{"id":"pkg:golang\/github.com\/fatih\/gomodifytags@v1.17.0","type":"registry+v1"},"links":{"opt":{},"share":{},"bin":{"gomodifytags":"gomodifytags"}},"schema_version":"1.1","name":"gomodifytags"}
