@@ -1,0 +1,6 @@
+
+* {
+    // font: "FiraCode Nerd Font 10";
+    font: "CaskaydiaCove Nerd Font Mono 12";
+    // font: "Hack 12";
+}

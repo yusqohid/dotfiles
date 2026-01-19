@@ -1,0 +1,46 @@
+include keybindings.conf
+
+background_opacity 1
+# Shell
+shell            fish
+
+# font_family JetBrainsMono Nerd Font
+# font_family GeistMono Nerd Font
+# font_family FiraCode Nerd Font
+# font_family CaskaydiaCove Nerd Font Mono
+font_family Hack
+# font_family DroidSansM Nerd Font Mono
+bold_font auto
+italic_font auto
+bold_italic_font auto
+font_size 12
+
+# Behaviour
+window_padding_width 10
+cursor_trail 2
+#background_opacity 0.60
+hide_window_decorations no
+confirm_os_window_close 0
+allow_remote_control yes
+# cursor #8ccf7e
+cursor_blink_interval -1
+# cursor_text_color #67b0e8
+cursor_shape block
+
+remember_window_size yes
+initial_window_width 1200
+initial_window_height 840
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Mocha
+include current-theme.conf
+# END_KITTY_THEME
+
+# Keybinding
+map ctrl+shift+left neighboring_window left
+map ctrl+shift+right neighboring_window right
+map ctrl+shift+up neighboring_window up
+map ctrl+shift+down neighboring_window down
+map ctrl+shift+m launch tmux
+

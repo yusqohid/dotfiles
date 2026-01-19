@@ -1,0 +1,191 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 26,
+  "modules-left": [
+    "custom/arch",
+    "niri/workspaces"
+  ],
+  "modules-center": [
+    "clock",
+    "custom/screenrecording-indicator"
+  ],
+  "modules-right": [
+    // "group/tray-expander",
+    "tray",
+    "bluetooth",
+    "network",
+    "memory",
+    "backlight",
+    "pulseaudio",
+    "cpu",
+    "battery"
+  ],
+  "niri/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󰮯"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "custom/arch": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
+    "on-click-right": "xdg-terminal-exec",
+    "tooltip-format": "Arch Linux"
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "󰍛 {usage:1}%",
+    "on-click": "$TERM btop"
+  },
+  "clock": {
+    "format": "{:L%A %H:%M}",
+    "format-alt": "{:L%d %B W%V %Y}",
+    "tooltip-format": "{calendar}",
+    "calendar": {
+      "format": {
+        "today": "<span color='#ff6699'><u>{}</u></span>"
+      }
+    }
+  },
+  "network": {
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "on-click": "$TERM nmtui"
+  },
+  "memory": {
+    "interval": 1,
+    "format": "\udb81\udfaf {used:0.1f}G",
+    "tooltip": true,
+    "tooltip-format": " RAM: {used:0.2f}G / {total:0.2f}G\nSwap: {swapUsed:0.2f}G / {swapTotal:0.2f}G",
+    "on-click": "kitty btop",
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-discharging": "{icon} {capacity}%",
+    "format-charging": "{icon} {capacity}%",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-scroll-up": "brightnessctl -q set 1%+",
+    "on-scroll-down": "brightnessctl -q set 1%-"
+  },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "blueberry"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume:2}",
+    "on-click": "pavucontrol",
+    "tooltip-format": "Playing at {volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  // "group/tray-expander": {
+  //   "orientation": "inherit",
+  //   "drawer": {
+  //     "transition-duration": 600,
+  //     "children-class": "tray-group-item"
+  //   },
+  //   "modules": ["custom/expand-icon", "tray"]
+  // },
+  // "custom/expand-icon": {
+  //   "format": "",
+  //   "tooltip": false
+  // },
+  // "custom/screenrecording-indicator": {
+  //   "on-click": "omarchy-cmd-screenrecord",
+  //   "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
+  //   "signal": 8,
+  //   "return-type": "json"
+  // },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 17
+  }
+}

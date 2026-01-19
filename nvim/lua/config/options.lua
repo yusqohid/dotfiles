@@ -1,0 +1,75 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+local o = vim.opt
+
+-- Indentation
+o.tabstop = 4
+o.shiftwidth = 4
+o.softtabstop = 4
+o.expandtab = true
+o.smartindent = true
+o.autoindent = true
+
+-- Search
+o.ignorecase = true -- ignore case in search patterns
+o.smartcase = true  -- override ignorecase if search has capital letter
+o.incsearch = true  -- incremental search
+o.hlsearch = true
+
+-- Line Number
+o.number = true
+o.relativenumber = true
+
+-- UI
+o.cursorline = true
+o.guicursor = ""
+o.wrap = false
+-- o.fillchars:append({ eob = " " })
+
+-- Clipboard
+-- o.clipboard:append("unnamedplus")
+
+-- Undo
+o.undofile = true
+o.undodir = vim.fn.stdpath("state") .. "/undo"
+
+-- File Handling
+o.swapfile = false
+o.backup = false
+o.autoread = true
+
+-- Fold
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldlevel = 99
+
+-- Spell Checking
+o.spelllang = { "en" }
+vim.keymap.set("n", "<leader>c", "1z=")
+o.dictionary:append("/usr/share/dict/words")
+
+-- Explorer
+-- vim.g.netrw_liststyle = 3
+vim.g.netrw_browse_split = 0
+vim.g.netrw_winsize = 25
+vim.keymap.set("n", "-", vim.cmd.Oil, { desc = "Open netrw here" })
+
+vim.diagnostic.config({
+    virtual_liens = true,
+    underline = true
+})
+
+-- Others
+o.termguicolors = true
+o.scrolloff = 8
+o.sidescrolloff = 16
+o.encoding = "utf-8"
+o.mouse = "a"
+o.showmatch = true
+o.undofile = true
+o.signcolumn = "yes"
+o.winborder = "rounded"
+o.timeoutlen = 500
+o.splitbelow = true
+o.splitright = true
