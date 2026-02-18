@@ -13,7 +13,6 @@ input {
     touchpad {
         tap
         dwt
-        drag-lock
         natural-scroll
         accel-speed 0.2
         scroll-method "two-finger" // edge
@@ -42,18 +41,20 @@ output "HDMI-A-1" {
 }
 
 layout {
-    gaps 16
+    gaps 10
     center-focused-column "never" // never | always | on-overflow
     default-column-width { proportion 0.5; }
 
     focus-ring {
         width 2
-        active-color "#7E9E91"
+        active-color "#738FAD"
         inactive-color "#505050"
     }
 
     struts {
         // left 64 right 64 top 64 bottom 64
+        left 16
+        right 16
     }
 }
 

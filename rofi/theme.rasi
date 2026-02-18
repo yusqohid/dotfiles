@@ -1,12 +1,13 @@
 
 * {
-    background:     #1d2021;        // Gruvbox
+    // background:     #1d2021;        // Gruvbox
     // background:     #1E1E2E;     // catppuccin
+    background:     #16191f;         // nordic
     background-alt: #262626;
     foreground:     #cfcfcf;
     // selected:       #904B47;     // orange
-    // selected:       #B4BEFE;     // catppuccin
-    selected:       #7E9E91;        // Gruvbox
+    selected:       #B4BEFE;     // catppuccin
+    // selected:       #7E9E91;        // Gruvbox
     active:         #61afef;
     urgent:         #61afef;
 }

@@ -5,7 +5,7 @@ return {
     --     lazy = false,
     --     priority = 1000,
     --     config = function()
-    --         vim.g.gruvbox_material_background = "hard" -- bisa: hard, medium, soft
+    --         vim.g.gruvbox_material_background = "hard"     -- bisa: hard, medium, soft
     --         vim.g.gruvbox_material_foreground = "material" -- atau: mix, original, material
     --         vim.g.gruvbox_material_enable_italic = false
     --         vim.g.gruvbox_material_transparent_background = 1
@@ -87,17 +87,17 @@ return {
     --   end
     -- }
 
-    {
-        "scottmckendry/cyberdream.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("cyberdream").setup({
-                transparent = true,
-            })
-            vim.cmd("colorscheme cyberdream")
-        end
-    }
+    -- {
+    --     "scottmckendry/cyberdream.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         require("cyberdream").setup({
+    --             transparent = true,
+    --         })
+    --         vim.cmd("colorscheme cyberdream")
+    --     end
+    -- }
 
     -- {
     --   "kdheepak/monochrome.nvim",
@@ -160,5 +160,25 @@ return {
     --         vim.cmd.colorscheme("catppuccin")
     --     end
     -- }
+
+    {
+        'AlexvZyl/nordic.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {
+        },
+        config = function()
+            require('nordic').setup({
+                transparent = {
+                    bg = true
+                },
+                on_highlight = function(highlights, palette)
+                    highlights.StatusLine = { bg = 'NONE', ctermbg = 'NONE' }
+                    highlights.StatusLineNC = { bg = 'NONE', ctermbg = 'NONE' }
+                end
+            })
+            require('nordic').load()
+        end
+    }
 
 }

@@ -16,9 +16,8 @@ return
             list = { selection = { preselect = false, auto_insert = true } },
             ghost_text = { enabled = true },
             menu = {
-                border = 'single',
                 draw = {
-                    columns = { { "label" }, { "kind_icon", "kind", gap = 1 } }
+                    columns = { { "kind_icon" }, { "label", "kind", gap = 1 } }
                 }
             },
             accept = {

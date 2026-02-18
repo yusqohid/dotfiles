@@ -17,3 +17,4 @@ abbr -a vim nvim
 abbr -a q exit
 abbr -a pa php artisan
 abbr -a sys sudo systemctl
+abbr -a mg exec mango

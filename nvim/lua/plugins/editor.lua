@@ -16,13 +16,6 @@ return {
     },
 
     {
-        'echasnovski/mini.pairs',
-        event = "InsertEnter",
-        opts = {}
-    },
-
-
-    {
         "folke/which-key.nvim",
         event = "VeryLazy",
         opts = {},
@@ -47,6 +40,32 @@ return {
             show_icons = true,
             leader_key = ';',        -- Recommended to be a single key
             buffer_leader_key = 'm', -- Per Buffer Mappings
+        }
+    },
+
+    {
+        "karb94/neoscroll.nvim",
+        opts = {},
+    },
+
+    {
+        "kdheepak/lazygit.nvim",
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        -- optional for floating window border decoration
+        -- dependencies = {
+        --     "nvim-lua/plenary.nvim",
+        -- },
+        -- setting the keybinding for LazyGit with 'keys' is recommended in
+        -- order to load the plugin when the command is run for the first time
+        keys = {
+            { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
         }
     },
 

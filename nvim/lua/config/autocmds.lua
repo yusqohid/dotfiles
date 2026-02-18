@@ -31,29 +31,6 @@ autocmd("FileType", {
     end,
 })
 
--- Hide the command line when not in use
-local cmdGrp = augroup("cmdline_height", { clear = true })
-local function set_cmdheight(val)
-    if vim.opt.cmdheight:get() ~= val then
-        vim.opt.cmdheight = val
-        vim.cmd.redrawstatus()
-    end
-end
-
-autocmd("CmdlineEnter", {
-    group = cmdGrp,
-    callback = function()
-        set_cmdheight(1)
-    end,
-})
-
-autocmd("CmdlineLeave", {
-    group = cmdGrp,
-    callback = function()
-        set_cmdheight(0)
-    end,
-})
-
 -- LSP onAttach
 autocmd("LspAttach", {
     group = augroup("UserLspConfig", { clear = true }),

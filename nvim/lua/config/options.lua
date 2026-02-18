@@ -23,7 +23,7 @@ o.relativenumber = true
 
 -- UI
 o.cursorline = true
-o.guicursor = ""
+-- o.guicursor = ""
 o.wrap = false
 -- o.fillchars:append({ eob = " " })
 
@@ -69,7 +69,7 @@ o.mouse = "a"
 o.showmatch = true
 o.undofile = true
 o.signcolumn = "yes"
-o.winborder = "rounded"
+o.winborder = ""
 o.timeoutlen = 500
 o.splitbelow = true
 o.splitright = true

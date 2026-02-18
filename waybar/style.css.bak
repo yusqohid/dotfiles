@@ -1,8 +1,8 @@
 * {
   /* Catppuccin */
   /* background-color: #11111b; */
-  background-color: #181818;
-  /* background-color: #16191f; */
+  /* background-color: #181818; */
+  background-color: #16191f;
 
   border: none;
   border-radius: 0;

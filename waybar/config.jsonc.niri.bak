@@ -6,9 +6,7 @@
     "height": 26,
     "modules-left": [
         "custom/arch",
-        // "dwl/tags",
-        "ext/workspaces",
-        "dwl/window"
+        "niri/workspaces"
     ],
     "modules-center": [
         "clock",
@@ -25,23 +23,28 @@
         "cpu",
         "battery"
     ],
-    "ext/workspaces": {
+    "niri/workspaces": {
+        "on-click": "activate",
         "format": "{icon}",
-        "ignore-hidden": true,
-        "on-click": "activate"
-    },
-    "dwl/tags": {
-        "num-tags": 9,
-        "hide-vacant": true,
-        "expand": false,
-        "disable-click": true,
-        "tag-labels": []
-    },
-    "dwl/window": {
-        "format": "{app_id} | {title}",
-        "max-length": 30,
-        "rewrite": {
-            " \\| ": ""
+        "format-icons": {
+            "default": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "active": "󰮯"
+        },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
         }
     },
     "custom/arch": {

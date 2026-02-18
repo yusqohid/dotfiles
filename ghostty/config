@@ -29,10 +29,10 @@ cursor-style = block
 cursor-style-blink = false
 cursor-text = cell-background
 shell-integration-features = no-cursor
-background-opacity = 1.0
+background-opacity = 0.9
 gtk-wide-tabs = false
 
-theme=Catppuccin Mocha
+theme=3024 Night
 #
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:

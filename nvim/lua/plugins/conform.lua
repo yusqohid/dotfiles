@@ -6,16 +6,16 @@ return
         require("conform").setup({
             formatters_by_ft = {
                 python = { "ruff" },
-                typescript = { "prettier" },
-                javascript = { "prettier" },
-                typescriptreact = { "prettier" },
-                javascriptreact = { "prettier" },
-                html = { "prettier" },
-                css = { "prettier" },
-                vue = { "prettier" },
-                json = { "prettier" },
+                typescript = { "oxfmt" },
+                javascript = { "oxfmt" },
+                typescriptreact = { "oxfmt" },
+                javascriptreact = { "oxfmt" },
+                html = { "oxfmt" },
+                css = { "oxfmt" },
+                vue = { "oxfmt" },
+                json = { "oxfmt" },
                 blade = { "blade-formatter" },
-                kdl = { "kdlfmt" }
+                -- kdl = { "kdlfmt" }
             },
             format_on_save = {
                 timeout_ms = 3000,

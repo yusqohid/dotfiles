@@ -8,12 +8,13 @@ shell            fish
 # font_family GeistMono Nerd Font
 # font_family FiraCode Nerd Font
 # font_family CaskaydiaCove Nerd Font Mono
-font_family Hack
+# font_family Hack
+font_family Terminess Nerd Font
 # font_family DroidSansM Nerd Font Mono
 bold_font auto
 italic_font auto
 bold_italic_font auto
-font_size 12
+font_size 14
 
 # Behaviour
 window_padding_width 10
@@ -33,7 +34,7 @@ initial_window_height 840
 
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Mocha
+# Gruvbox Material Dark Hard
 include current-theme.conf
 # END_KITTY_THEME
 

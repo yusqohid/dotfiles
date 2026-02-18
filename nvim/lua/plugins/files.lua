@@ -2,14 +2,17 @@ return {
     {
         'stevearc/oil.nvim',
         opts = {
+            view_options = {
+                show_hidden = true,
+            },
             delete_to_trash = true,
             float = {
-                padding = 8,
-                max_width = 0.5,
+                padding = 4,
+                max_width = 0.8,
                 max_height = 0,
             },
         },
-        dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         lazy = false,
     },
 

@@ -1,7 +1,7 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
   rxfetch
-  set -g fish_greeting 'Hello!'
+  set -g fish_greeting ''
 end
 
 zoxide init fish | source
