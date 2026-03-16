@@ -4,9 +4,9 @@ vim.g.maplocalleader = " "
 local o = vim.opt
 
 -- Indentation
-o.tabstop = 4
-o.shiftwidth = 4
-o.softtabstop = 4
+o.tabstop = 2
+o.shiftwidth = 2
+o.softtabstop = 2
 o.expandtab = true
 o.smartindent = true
 o.autoindent = true
@@ -56,20 +56,20 @@ vim.g.netrw_winsize = 25
 vim.keymap.set("n", "-", vim.cmd.Oil, { desc = "Open netrw here" })
 
 vim.diagnostic.config({
-    virtual_liens = true,
-    underline = true
+  virtual_liens = true,
+  underline = true
 })
 
 -- Others
 o.termguicolors = true
 o.scrolloff = 8
-o.sidescrolloff = 16
+o.sidescrolloff = 4
 o.encoding = "utf-8"
 o.mouse = "a"
 o.showmatch = true
 o.undofile = true
 o.signcolumn = "yes"
-o.winborder = ""
+o.winborder = "rounded"
 o.timeoutlen = 500
 o.splitbelow = true
 o.splitright = true

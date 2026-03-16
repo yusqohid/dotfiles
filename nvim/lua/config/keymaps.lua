@@ -7,6 +7,7 @@ map("n", "<leader>q", "<cmd>quit<CR>", { desc = "Quit" })
 map("n", "<leader>z", "<cmd>Lazy<CR>", { desc = "Lazy Dashboard" })
 map("i", "jk", "<Esc>", { desc = "Exit Insert Mode" })
 map("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+map("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Open File Tree" })
 
 -- === Terminal ===
 map("n", "<leader>t", "<cmd>terminal<CR>i", { desc = "Terminal Float/Current" })
@@ -43,7 +44,8 @@ map("v", ">", ">gv")
 
 -- Find and Replace
 map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "Replace word under cursor" })
+  { desc = "Replace word under cursor" })
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { silent = true })
 
 -- === Clipboard ===
 -- Copy
