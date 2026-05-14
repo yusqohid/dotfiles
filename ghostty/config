@@ -21,8 +21,10 @@
 # # separated by equals signs.
 # font-family = FiraCode Nerd Font
 # font-family = CaskaydiaCove Nerd Font Mono
-font-family = Hack
-font-size = 12
+# font-family = Hack
+font-family = Terminess Nerd Font
+# font-family = SauceCodePro Nerd Font
+font-size = 14
 window-padding-x = 12
 window-padding-y = 12
 cursor-style = block
@@ -32,7 +34,8 @@ shell-integration-features = no-cursor
 background-opacity = 0.9
 gtk-wide-tabs = false
 
-theme=3024 Night
+# theme=Gruvbox Dark Hard
+theme=Carbonfox
 #
 # # Spacing around the equals sign does not matter.
 # # All of these are identical:
@@ -44,7 +47,8 @@ theme=3024 Night
 # # Any line beginning with a # is a comment. It's not possible to put
 # # a comment after a config option, since it would be interpreted as a
 # # part of the value. For example, this will have a value of "#123abc":
-# background = #000000
+# background = #1d1d1d
+background = #000000
 #
 # # Empty values are used to reset config keys to default.
 # key =

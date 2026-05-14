@@ -1,0 +1,35 @@
+/* ── Gruvbox Material Palette ─────────────────────────────── */
+@define-color base        #1e2122;
+@define-color mantle      #1a1d1e;
+@define-color crust       #161819;
+
+@define-color text        #c7b89d;
+@define-color subtext0    #606364;
+@define-color subtext1    #575a5b;
+
+@define-color surface0    #282b2c;
+@define-color surface1    #393c3d;
+@define-color surface2    #404344;
+
+@define-color overlay0    #484b4c;
+@define-color overlay1    #545758;
+@define-color overlay2    #606364;
+
+@define-color blue        #6d8dad;
+@define-color lavender    #9385b4;
+@define-color sapphire    #82b3a8;
+@define-color sky         #82b3a8;
+@define-color teal        #749689;
+
+@define-color green       #89b482;
+@define-color yellow      #d6b676;
+@define-color peach       #e78a4e;
+
+@define-color maroon      #ce8196;
+@define-color red         #ec6b64;
+
+@define-color mauve       #9385b4;
+@define-color pink        #ff75a0;
+
+@define-color flamingo    #ce8196;
+@define-color rosewater   #c7b89d;

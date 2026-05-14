@@ -1,23 +1,23 @@
 include keybindings.conf
 
-background_opacity 1
+#background_opacity 0.95
 # Shell
 shell            fish
 
-# font_family JetBrainsMono Nerd Font
+font_family JetBrainsMono Nerd Font
 # font_family GeistMono Nerd Font
 # font_family FiraCode Nerd Font
 # font_family CaskaydiaCove Nerd Font Mono
 # font_family Hack
-font_family Terminess Nerd Font
+# font_family Terminess Nerd Font
 # font_family DroidSansM Nerd Font Mono
 bold_font auto
 italic_font auto
 bold_italic_font auto
-font_size 14
+font_size 12
 
 # Behaviour
-window_padding_width 10
+window_padding_width 12
 cursor_trail 2
 #background_opacity 0.60
 hide_window_decorations no
@@ -45,3 +45,14 @@ map ctrl+shift+up neighboring_window up
 map ctrl+shift+down neighboring_window down
 map ctrl+shift+m launch tmux
 
+map page_up    scroll_page_up
+map page_down    scroll_page_down
+
+map ctrl+plus  change_font_size all +1
+map ctrl+equal  change_font_size all +1
+map ctrl+kp_add  change_font_size all +1
+map ctrl+minus       change_font_size all -1
+map ctrl+underscore       change_font_size all -1
+map ctrl+kp_subtract       change_font_size all -1
+map ctrl+0 change_font_size all 0
+map ctrl+kp_0 change_font_size all 0

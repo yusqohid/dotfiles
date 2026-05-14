@@ -1,0 +1,21 @@
+#!/bin/bash
+
+THEME_DIR="$HOME/.config/waybar/colors"
+CURRENT_THEME_LINK="$HOME/.config/waybar/current-theme.css"
+
+# Ambil daftar file .css di folder colors
+mapfile -t themes < <(ls "$THEME_DIR" | grep ".css")
+
+# Tampilkan di Rofi
+choice=$(printf "%s\n" "${themes[@]}" | rofi -dmenu -i -p "Pilih Tema Waybar:")
+
+# Jika user memilih sesuatu (bukan tekan Esc)
+if [ -n "$choice" ]; then
+    # Buat symlink baru yang mengarah ke tema pilihan
+    ln -sf "$THEME_DIR/$choice" "$CURRENT_THEME_LINK"
+
+    # Refresh Waybar tanpa restart (Sinyal SIGUSR2)
+    pkill -USR2 waybar
+
+    notify-send "Waybar" "Tema diganti ke: $choice"
+fi

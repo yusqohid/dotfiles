@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export BAT_THEME:gruvbox\x2ddark
 SETUVAR --export EDITOR:nvim
 SETUVAR --export PHP_INI_SCAN_DIR:/home/yusqohid/\x2econfig/herd\x2dlite/bin
 SETUVAR __fish_initialized:4300
-SETUVAR fish_user_paths:/home/yusqohid/\x2eopencode/bin\x1e/home/yusqohid/\x2elocal/bin\x1e/home/yusqohid/\x2econfig/herd\x2dlite/bin
+SETUVAR fish_user_paths:/home/yusqohid/\x2elocal/share/nvim/mason/bin\x1e/home/yusqohid/\x2ecargo/bin\x1e/home/yusqohid/\x2econfig/emacs/bin\x1e/home/yusqohid/\x2eopencode/bin\x1e/home/yusqohid/\x2elocal/bin\x1e/home/yusqohid/\x2econfig/herd\x2dlite/bin

@@ -1,110 +1,274 @@
+@import url("./current-theme.css");
+/* @import url("./colors/gruvbox-material.css"); */
+/* ── Global reset ─────────────────────────────────────────── */
 * {
-  /* Catppuccin */
-  /* background-color: #11111b; */
-  background-color: #181818;
-  /* background-color: #16191f; */
-
   border: none;
   border-radius: 0;
-  min-height: 0;
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "JetBrainsMono Nerd Font", "Noto Sans", monospace;
   font-size: 12px;
+  min-height: 0;
 }
 
-.modules-left {
-  margin-left: 8px;
-  color: #eaeaea;
+/* ── Bar window ───────────────────────────────────────────── */
+window#waybar {
+  background-color: alpha(@mantle, 1);
+  color: @text;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
 }
 
-.modules-center {
-  color: #eaeaea;
+window#waybar.hidden {
+  opacity: 0.3;
 }
-.modules-right {
-  margin-right: 8px;
-  color: #eaeaea;
+
+/* ── Tooltip ──────────────────────────────────────────────── */
+tooltip {
+  background-color: @mantle;
+  color: @text;
+  border: 1px solid @surface1;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+tooltip label {
+  color: @text;
+}
+
+#clock tooltip {
+  font-size: 24px;
+  padding: 20px;
+}
+
+#clock tooltip * {
+  font-size: 24px;
+}
+
+#clock tooltip label {
+  font-size: 24px;
+}
+
+/* ── Common module styles ─────────────────────────────────── */
+#workspaces,
+#window,
+#clock,
+#backlight,
+#memory,
+#pulseaudio,
+#network,
+#bluetooth,
+#battery,
+#tray,
+#custom-arch,
+#custom-launcher,
+#custom-power {
+  background-color: transparent;
+  color: @text;
+  padding: 2px 10px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* ── Workspaces ───────────────────────────────────────────── */
+#workspaces {
+  background-color: @surface0;
+  border-radius: 8px;
+  padding: 2px 4px;
 }
 
 #workspaces button {
   background: transparent;
-  color: #eaeaea;
-  padding: 0 6px;
-  margin: 0 1.5px;
-  min-width: 9px;
+  color: @overlay1;
+  padding: 2px 8px;
+  font-size: 22px;
+  transition: all 0.15s ease;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  -gtk-outline-radius: 0;
 }
+
+#workspaces button:focus {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  -gtk-outline-radius: 0;
+}
+
+#workspaces button:hover {
+  background: transparent;
+  color: @text;
+}
+
+#workspaces button.focused {
+  background: transparent;
+  color: @text;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#workspaces button.focused label {
+  color: @text;
+}
+
 #workspaces button.urgent {
-  color: #a55555;
-}
-#workspaces button.active {
-  color: #e78a4e;
+  background: transparent;
+  color: @red;
 }
 
 #workspaces button.empty {
-  opacity: 0.4;
+  background: transparent;
+  color: @surface2;
 }
 
-#cpu,
-#battery,
-#pulseaudio,
-#custom-arch,
-#custom-screenrecording-indicator,
-#custom-update {
-  min-width: 12px;
-  margin: 0 7.5px;
-}
-#battery.charging,
-#battery.full {
-  color: #8ec07c; /* hijau */
-}
-#battery.critical {
-  color: #a55555; /* merah */
+/* ── Window title ─────────────────────────────────────────── */
+#window {
+  color: @subtext1;
+  font-style: italic;
+  background-color: @surface0;
 }
 
-#tray {
-  margin-right: 16px;
-}
-
-#bluetooth {
-  margin-right: 17px;
-}
-
-#network {
-  margin-right: 16px;
-}
-
-#memory {
-  margin-right: 16px;
-}
-
-#backlight {
-  margin-right: 14px;
-}
-
-#custom-expand-icon {
-  margin-right: 20px;
-}
-
-tooltip {
-  padding: 2px;
-}
-
-#custom-update {
-  font-size: 10px;
-}
-
+/* ── Clock ────────────────────────────────────────────────── */
 #clock {
-  margin-left: 8.75px;
+  background-color: @surface0;
+  color: @text;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 4px 14px;
 }
 
-.hidden {
-  opacity: 0;
+/* ── Audio ────────────────────────────────────────────────── */
+#pulseaudio {
+  color: @green;
+  background-color: @surface0;
 }
 
-#custom-screenrecording-indicator {
-  min-width: 12px;
-  margin-left: 8.75px;
-  font-size: 10px;
+#pulseaudio.muted {
+  color: @red;
 }
 
-#custom-screenrecording-indicator.active {
-  color: #a55555;
+#pulseaudio:hover {
+  background-color: @surface1;
+}
+
+/* ── Memory ──────────────────────────────────────────────── */
+#memory {
+  color: @maroon;
+  background-color: @surface0;
+}
+#memory.hover {
+  background-color: @surface1;
+}
+
+/* ── Backlight ──────────────────────────────────────────────── */
+#backlight {
+  color: @yellow;
+  background-color: @surface0;
+}
+#backlight:hover {
+  background-color: @surface1;
+}
+/* ── Network ──────────────────────────────────────────────── */
+#network {
+  color: @sapphire;
+  background-color: @surface0;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#network:hover {
+  background-color: @surface1;
+}
+
+/* ── Bluetooth ────────────────────────────────────────────── */
+#bluetooth {
+  color: @blue;
+  background-color: @surface0;
+}
+
+#bluetooth.disabled {
+  color: @overlay0;
+}
+
+#bluetooth.connected {
+  color: @teal;
+}
+
+#bluetooth:hover {
+  background-color: @surface1;
+}
+
+/* ── Battery ──────────────────────────────────────────────── */
+#battery {
+  color: @green;
+  background-color: @surface0;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @teal;
+}
+
+#battery.warning:not(.charging) {
+  color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+  to { color: @maroon; }
+}
+
+#battery:hover {
+  background-color: @surface1;
+}
+
+/* ── System tray ──────────────────────────────────────────── */
+#tray {
+  background-color: @surface0;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @yellow;
+  border-radius: 6px;
+}
+
+/* ── Custom: Arch ────────────────────────────────────────── */
+#custom-arch {
+  color: @blue;
+  background-color: @surface0;
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  min-width: 20px;
+}
+
+#custom-arch:hover {
+  background-color: @surface1;
+  color: @sapphire;
+}
+
+/* ── Custom: Power ────────────────────────────────────────── */
+#custom-power {
+  background-color: @surface0;
+  color: @red;
+  font-size: 16px;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+#custom-power:hover {
+  background-color: @red;
+  color: @base;
 }
