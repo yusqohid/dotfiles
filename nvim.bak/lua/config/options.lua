@@ -63,10 +63,12 @@ vim.diagnostic.config({
 })
 
 -- Autocomplete
-o.complete = ".,o"                             -- use buffer and omnifunc
-o.completeopt = "fuzzy,menuone,noinsert,popup" -- add 'popup' for docs (sometimes)
+o.complete = "o"                             -- use buffer and omnifunc
+o.completeopt = "fuzzy,menuone,noselect,popup" -- add 'popup' for docs (sometimes)
 o.autocomplete = true
 o.pumheight = 7
+o.pummaxwidth = 40
+o.autocompletedelay = 300
 
 -- Others
 o.termguicolors = true

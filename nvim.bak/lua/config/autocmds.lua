@@ -98,3 +98,17 @@ autocmd({ "BufRead", "BufNewFile" }, {
     vim.bo.filetype = "html"
   end,
 })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup("NativeLSPCompletion", { clear = true }),
+  callback = function(args)
+    local client_id = args.data.client_id
+    local client = vim.lsp.get_client_by_id(client_id)
+
+    -- Pastikan LSP mendukung fitur autocompletion
+    if client and client:supports_method("textDocument/completion") then
+      -- Aktifkan autocompletion bawaan Neovim dengan fitur autotrigger
+      vim.lsp.completion.enable(true, client_id, args.buf, { autotrigger = true })
+    end
+  end,
+})
