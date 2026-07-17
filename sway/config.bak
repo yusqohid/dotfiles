@@ -1,0 +1,99 @@
+include ~/.config/sway/keybinds
+
+default_border pixel 2
+titlebar_padding 1
+# class                 border  backgr  text    indic.  child_border
+# client.focused          #83A598 #83A598 #282828 #B8BB26 #83A598
+# client.focused_inactive #353535 #353535 #EBDBB2 #353535 #353535
+# client.unfocused        #353535 #282828 #888888 #282828 #353535
+# client.urgent           #FB4934 #FB4934 #EBDBB2 #FB4934 #FB4934
+hide_edge_borders smart
+smart_gaps on
+
+# gaps inner 4
+# gaps outer 2
+
+### Output configuration
+output * {
+  bg $wallpaper fill
+  res 1920x1080
+}
+# Vertical Layout
+# output HDMI-A-1 pos 0 0
+# output eDP-1 pos 0 1080
+
+# Horizontal Layout
+output eDP-1 pos 1920 0
+output HDMI-A-1 pos 0 0
+
+# output eDP-1 disable
+
+workspace 1 output eDP-1
+workspace 2 output HDMI-A-1
+
+# exec waybar
+exec wl-paste --type text --watch cliphist store
+exec wl-paste --type image --watch cliphist store
+
+exec foot --server
+exec emacs --daemon
+### Idle configuration
+#
+# Example configuration:
+#
+exec swayidle -w \
+         timeout 600 'swaylock -f -c 000000' \
+         timeout 800 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+#
+# Example configuration:
+#
+  input type:touchpad {
+      dwt enabled
+      tap enabled
+      natural_scroll enabled
+      middle_emulation enabled
+      drag_lock disabled
+  }
+#
+  # input type:keyboard {
+  #     xkb_options caps:escape
+  # }
+#
+# You can also configure each device individually.
+# Read `man 5 sway-input` for more information about this section.
+
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position bottom
+
+    font pango:JetBrainsMono Nerd Font 11
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    # status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command i3status-rs ~/.config/i3status-rust/config.toml
+
+    # colors {
+    #     background #1d1d1d
+    #     statusline #EBDBB2
+    #     separator  #353535
+    #
+    #     # Warna tombol workspace (Gruvbox Aqua)
+    #     focused_workspace  #83A598 #83A598 #282828
+    #     inactive_workspace #282828 #282828 #888888
+    # }
+    colors {
+        # Carbonfox Palette
+        background #000000
+        statusline #f2f4f8
+        separator  #282828
+    }
+}
+
+include /etc/sway/config.d/*
